@@ -1,0 +1,24 @@
+Database Schema Mapping: User & Product System
+
+Table: User
+-----------------------------------
+- ID (integer) [Primary Key]
+- firstName (varchar)
+- lastName (varchar)
+- email (varchar)
+- role (varchar)
+- password (varchar)
+
+Table: Product
+-----------------------------------
+- id (integer) [Primary Key]
+- name (varchar)
+- stock (integer)
+- isDeleted (bool)
+- price (integer)
+- user_id (integer) [Foreign Key referencing User.ID]
+
+Table: User_Phone
+-----------------------------------
+- phone_number (varchar) [Primary Key]
+- user_id (integer) [Primary Key, Foreign Key referencing User.ID]
